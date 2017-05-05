@@ -12,8 +12,11 @@ class Home extends Component {
   render() {
     return (
       <section className="container home">
-        <p onClick={this.handleSubmit}>teste</p>
-        <ShowcaseItem />
+        <div className="row">
+          <div className="col-xs-3">
+            <ShowcaseItem />
+          </div>
+        </div>
         <Bag />
       </section>
     );
