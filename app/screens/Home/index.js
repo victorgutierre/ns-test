@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import ShowcaseItem from './ShowcaseItem';
+import Bag from './Bag';
+
 class Home extends Component {
   handleSubmit(e) {
     e.preventDefault;
@@ -9,7 +12,9 @@ class Home extends Component {
   render() {
     return (
       <section className="container home">
-        <p onClick={this.handleSubmit}>blah</p>
+        <p onClick={this.handleSubmit}>teste</p>
+        <ShowcaseItem />
+        <Bag />
       </section>
     );
   }
