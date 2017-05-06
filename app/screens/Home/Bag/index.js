@@ -19,7 +19,7 @@ class Bag extends Component {
         <BagSubTotal />
 
         <div className="container">
-          <button>
+          <button className="button button-primary button-full">
             Comprar
           </button>
         </div>

@@ -9,7 +9,9 @@ const BagSubTotal = () => {
         subtotal
       </div>
       <div className="bag-subtotal-prices">
-        <strong className="bag-subtotal-price">R$ 370,00</strong>
+        <strong className="bag-subtotal-price">
+          <span>R$</span> 370<span>,00</span>
+        </strong>
         <span className="bag-subtotal-installments-price">ou em até 10x de R$ 18,00</span>
       </div>
     </div>
