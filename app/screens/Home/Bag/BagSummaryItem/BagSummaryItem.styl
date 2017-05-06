@@ -1,2 +1,59 @@
 .bag-summary-item
+  display flex
+  position relative
+  padding 25px 20px
+  border-top 2px solid #000
+  border-bottom 2px solid #000
+  &:after
+    opacity 0
+    visibility hidden
+    content ''
+    display block
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    transition all .2s
+    background-color rgba(0, 0, 0, .7)
+
+  &:hover
+    &:after
+      opacity 1
+      visibility visible
+
+    .bag-summary-item-title
+    .bag-summary-item-info
+    .bag-summary-item-quantity
+    .bag-summary-price
+      text-decoration line-through
+
+.bag-summary-item-image
+  width 12%
+  margin-right $space
+  img
+    width 50px
+    height 50px
+
+.bag-summary-item-content
+  width 68%
+
+.bag-summary-item-title
   display block
+  margin-bottom 5px
+  font-size 14px
+  font-weight 700
+  line-height 1.2
+
+.bag-summary-item-info
+.bag-summary-item-quantity
+  color $light-grey
+  font-weight 500
+  font-size 13px
+  line-height 1.2
+
+.bag-summary-price
+  margin-top $space
+  font-size 14px
+  font-weight 700
+  color $primary-color

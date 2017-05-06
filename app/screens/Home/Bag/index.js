@@ -12,16 +12,15 @@ class Bag extends Component {
             <i className="ico bag-icon"></i>
             <span className="bag-quantity-in-bag">3</span>
           </div>
-          <p className="bag-title-icon-wrapper">Sacola</p>
+          <p className="bag-title-content">Sacola</p>
         </div>
 
-        // map aqui
         <BagSummaryItem />
         <BagSubTotal />
 
         <div className="container">
           <button>
-            Finalizar Compra
+            Comprar
           </button>
         </div>
       </div>
