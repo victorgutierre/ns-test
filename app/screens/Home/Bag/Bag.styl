@@ -7,7 +7,12 @@
   right 0
   color #fff
   z-index 1
+  transform translateX(500px)
+  transition all .4s
   background-color $secondary-color
+
+  &.is-open
+    transform translateX(0)
 
 .bag-title
   display flex

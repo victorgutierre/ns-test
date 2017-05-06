@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import BagSummaryItem from './BagSummaryItem';
 import BagSubTotal from './BagSubTotal';
 
 class Bag extends Component {
   render() {
+    const { itemsInBag, productIsAdded } = this.props;
+
     return (
-      <div className="bag">
+      <div className={`bag ${productIsAdded ? 'is-open' : ''}`}>
         <div className="bag-title">
           <div className="bag-title-icon-wrapper">
             <i className="ico bag-icon"></i>
@@ -15,17 +17,21 @@ class Bag extends Component {
           <p className="bag-title-content">Sacola</p>
         </div>
 
-        <BagSummaryItem />
-        <BagSubTotal />
+        {itemsInBag.map((item, i) =>
+          <BagSummaryItem key={i + 1} item={item} />
+        )}
 
-        <div className="container">
-          <button className="button button-primary button-full">
-            Comprar
-          </button>
-        </div>
+        <BagSubTotal itemsInBag={itemsInBag} />
+        <button className="button button-primary button-full">
+          Comprar
+        </button>
       </div>
     );
   }
+}
+
+Bag.propTypes = {
+  product: PropTypes.array,
 }
 
 export default Bag;

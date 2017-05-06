@@ -1,7 +1,16 @@
 import React from 'react';
 
-const BagSubTotal = () => {
-  console.log('blah');
+import { money } from './../../../../utils/filters';
+
+const BagSubTotal = (props) => {
+  const { itemsInBag } = props;
+  let subtotalSum = 0;
+
+  if(itemsInBag) {
+    for (let i = 0; itemsInBag.length > i; i++) {
+      subtotalSum += itemsInBag[i].price;
+    }
+  }
 
   return (
     <div className="bag-subtotal">
@@ -10,7 +19,7 @@ const BagSubTotal = () => {
       </div>
       <div className="bag-subtotal-prices">
         <strong className="bag-subtotal-price">
-          <span>R$</span> 370<span>,00</span>
+          <span>R$</span>{money(subtotalSum)}
         </strong>
         <span className="bag-subtotal-installments-price">ou em até 10x de R$ 18,00</span>
       </div>
