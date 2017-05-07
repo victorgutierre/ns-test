@@ -21,7 +21,7 @@ const BagSubTotal = (props) => {
         <strong className="bag-subtotal-price">
           <span>R$</span>{money(subtotalSum)}
         </strong>
-        <span className="bag-subtotal-installments-price">ou em até 10x de R$ 18,00</span>
+        <span className="bag-subtotal-installments-price">ou em até 10x de R$ {money(subtotalSum / 10)}</span>
       </div>
     </div>
   );

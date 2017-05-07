@@ -15,7 +15,7 @@ class ShowcaseItem extends Component {
     return (
       <div className="showcase-item">
         <div className="showcase-item-image">
-          <img src="http://placehold.it/180x230" />
+          <img src={product.image} title={product.title}/>
         </div>
         <div className="showcase-item-name">
           {product.title} - {product.description}

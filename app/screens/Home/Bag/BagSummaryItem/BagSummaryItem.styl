@@ -2,8 +2,11 @@
   display flex
   position relative
   padding 25px 20px
-  border-top 2px solid #000
   border-bottom 2px solid #000
+  transition all .2s
+  &:first-child
+    border-top 2px solid #000
+    
   &:after
     opacity 0
     visibility hidden
@@ -18,32 +21,39 @@
     background-color rgba(0, 0, 0, .7)
 
   &:hover
-    &:after
-      opacity 1
-      visibility visible
-
-    .bag-summary-item-title
-    .bag-summary-item-info
-    .bag-summary-item-quantity
-    .bag-summary-price
-      text-decoration line-through
-
+    background-color $secondary-color-darker
+    .bag-summary-remove-wrapper
+      color #fff
+      
+.bag-summary-remove-wrapper
+  position absolute
+  color #000
+  top 12px
+  right 18px
+  font-size 16px
+  font-weight 700
+  cursor pointer
+  transition all .2s
+      
 .bag-summary-item-image
   width 12%
   margin-right $space
   img
-    width 50px
-    height 50px
+    width 100%
 
 .bag-summary-item-content
   width 68%
 
 .bag-summary-item-title
   display block
+  width 90%
   margin-bottom 5px
   font-size 14px
   font-weight 700
   line-height 1.2
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
 
 .bag-summary-item-info
 .bag-summary-item-quantity
